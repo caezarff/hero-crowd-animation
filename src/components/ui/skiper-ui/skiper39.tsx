@@ -2,6 +2,7 @@
 
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
+import { Button } from "../button";
 
 interface CrowdCanvasProps {
   src: string;
@@ -304,12 +305,23 @@ const Hero = () => {
           </p>
 
           <div className="flex items-center gap-4">
-            <button
-              type="button"
-              className="rounded-lg bg-black px-6 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-neutral-800"
-            >
-              Book a call
-            </button>
+            <Button size="sm" className="rounded-lg text-sm font-semibold">
+              Start now
+              <svg
+                aria-hidden="true"
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </Button>
           </div>
         </div>
       </div>
